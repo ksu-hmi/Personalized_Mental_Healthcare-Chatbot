@@ -1,6 +1,0 @@
-streamlit
-openai
-torch
-pillow
-numpy
-transformers
