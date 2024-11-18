@@ -4,7 +4,7 @@ import speech_recognition as sr
 import streamlit as st
 
 # Set OpenAI API key
-openai.api_key = "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"
+openai.api_key = "API-Key"
 
 # Load mental health dataset
 mentalhealth = pd.read_csv("AI_Mental_Health.csv")
