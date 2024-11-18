@@ -9,5 +9,5 @@
 - [X] Updated code
 - [X] Ran updated code
 # Next Steps #
-- [ ] Make edits (6) and additions
-- [ ] Subsribe to openai to access API key
+- [ ] Make edits and additions
+- [ ] Subscribe to openai to access API key
