@@ -4,7 +4,7 @@ import speech_recognition as sr
 import streamlit as st
 
 # Set OpenAI API key
-openai.api_key = "API-Key"
+openai.api_key = "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"
 
 # Load mental health dataset
 mentalhealth = pd.read_csv("AI_Mental_Health.csv")
@@ -88,3 +88,21 @@ def generate_response(input_text):
     except Exception as e:
         return f"Error generating response: {e}"
 
+def generate_response(input_text):
+    try:
+        # OpenAI API call
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=st.session_state.messages,
+            temperature=0.7,
+            max_tokens=150,
+        )
+        return response.choices[0].message["content"]
+    except openai.error.AuthenticationError:
+        return "Authentication failed. Please check your API key."
+    except openai.error.RateLimitError:
+        return "Rate limit exceeded. Please try again later."
+    except openai.error.APIConnectionError:
+        return "Network error. Please check your internet connection."
+    except Exception as e:
+        return f"An unexpected error occurred: {e}"
