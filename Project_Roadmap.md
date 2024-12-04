@@ -12,4 +12,5 @@
 - [X] Make edits and additions
 - [X] Subscribe to openai to access API key
 - [X] Initialize conversation history
+- [X] Append assistant's response to conversation history
 
