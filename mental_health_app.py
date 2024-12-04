@@ -61,3 +61,30 @@ def suggest_resources(query, dataset):
             st.write(f"- {row['Resource Name']}: {row['Details']}")
     else:
         st.write("No specific resources found for your query.")
+
+
+        # Initialize conversation history
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+def generate_response(input_text):
+    try:
+        # Append user input to conversation history
+        st.session_state.messages.append({"role": "user", "content": input_text})
+        
+        # Call OpenAI API
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=st.session_state.messages,
+            temperature=0.7,
+            max_tokens=150,
+        )
+        
+        # Append assistant's response to conversation history
+        assistant_response = response.choices[0].message["content"]
+        st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+        
+        return assistant_response
+    except Exception as e:
+        return f"Error generating response: {e}"
+
