@@ -3,4 +3,4 @@ The app is an AI-powered chatbot that offers personalized mental healthcare supp
 Run Personalized_Mental_Healthcare-Chatbot.py file with AI_MENTAL_HEALTH.csv dataset for checking chatbot.
 Install the required packages by running the following command in your terminal: "pip install -r requirements.txt". This will install all the necessary Python libraries, including streamlit, openai, pandas & speech_recognition.
 
-<img src= "./Project/Screenshot 2024-12-04 at 5.55.43 PM.png" width=800 height=500 />
+<img src= "./Project/Screenshot 2024-12-04 at 5.55.43 PM.png" width=900 height=600 />
