@@ -51,3 +51,13 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+    # Suggest resources based on user query
+def suggest_resources(query, dataset):
+    relevant_rows = dataset[dataset['Symptoms'].str.contains(query, case=False, na=False)]
+    if not relevant_rows.empty:
+        st.write("Suggested Resources:")
+        for _, row in relevant_rows.iterrows():
+            st.write(f"- {row['Resource Name']}: {row['Details']}")
+    else:
+        st.write("No specific resources found for your query.")
