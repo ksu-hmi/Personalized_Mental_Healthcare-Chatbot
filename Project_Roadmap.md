@@ -8,6 +8,8 @@
 - [X] Modified script
 - [X] Updated code
 - [X] Ran updated code
-# Next Steps #
-- [ ] Make edits and additions
-- [ ] Subscribe to openai to access API key
+- [X] Suggest resources based on user query
+- [X] Make edits and additions
+- [X] Subscribe to openai to access API key
+- [X] Initialize conversation history
+
